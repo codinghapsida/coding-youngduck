@@ -1,5 +1,3 @@
-#국회의원 선거
-
 import sys
 
 n=int(sys.stdin.readline())
@@ -7,7 +5,6 @@ num=int(sys.stdin.readline())
 data=[]
 cnt=0
 
-#n=1일때 생각해주어야함.
 if n ==1:
     cnt=0
 else:
@@ -17,6 +14,8 @@ else:
         data[data.index(max(data))]-=1
         num+=1
         cnt+=1
+
+
 
 
 print(cnt)
