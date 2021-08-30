@@ -15,5 +15,4 @@ for i in range(n+1):
     if len(result)<len(data):
         result=data
 
-print(len(result))
-print(*result)
+print(result)
