@@ -1,20 +1,17 @@
 import sys
-from itertools import combinations
 
-fox=[1,3,4]
-fox=list(combinations(fox,2))
-cnt=0
-for i in range(int(sys.stdin.readline())):
-    finger=tuple(map(int,sys.stdin.readline().split()))
-    
-    if finger in fox:
-        cnt+=1
-        if cnt ==3:
-            print("Wa-pa-pa-pa-pa-pa-pow!")
-            break
+data=[[1,3],[3,4],[1,4]]
+n=int(sys.stdin.readline())
+
+if n == 3:
+    for i in range(n):
+        finger=list(map(int,sys.stdin.readline().split()))
+        finger.sort()
+        if finger in data:
+            data.pop(data.index(finger))
+    if not data:
+        print("Wa-pa-pa-pa-pa-pa-pow!")
     else:
         print("Woof-meow-tweet-squeek")
-        break 
-
-
-
+else:
+    print("Woof-meow-tweet-squeek")
