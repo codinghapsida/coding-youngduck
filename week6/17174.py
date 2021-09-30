@@ -1,14 +1,12 @@
 import sys
 
-n=int(sys.stdin.readline())
+n,m=map(int,sys.stdin.readline().split())
 
-case1=int("12"*n)
-case2=int("21"*n)
+result=n
 
-data=int(sys.stdin.readline())
+while n>=m:
+    n=n//m
+    result+=n
 
 
-if (data==case1) or (data==case2):
-    print("Yes")
-else:
-    print("No")
+print(result)
